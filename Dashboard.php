@@ -5,10 +5,10 @@ date_default_timezone_set('Asia/Kolkata');
 include('Header.php');
 // Include database connection (you should have a separate file for the database connection)
 // Database connection
-$host = 'localhost';      // Replace with your host (e.g., localhost)
+$host = 'cberp.mysql.database.azure.com';      // Replace with your host (e.g., localhost)
 $dbname = 'cberp';        // Replace with your database name
-$username = 'root';       // Replace with your database username
-$password = '';           // Replace with your database password
+$username = 'Zaheer';       // Replace with your database username
+$password = 'Khan12@@';           // Replace with your database password
 
 try {
     // Establish PDO connection to the database
