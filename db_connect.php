@@ -1,8 +1,8 @@
 <?php
-$host = 'localhost';      // Replace with your host (e.g., localhost)
+$host = 'cberp.mysql.database.azure.com';      // Replace with your host (e.g., localhost)
 $dbname = 'cberp';        // Replace with your database name
-$username = 'root';       // Replace with your database username
-$password = '';           // Replace with your database password
+echo $username = 'Zaheer';       // Replace with your database username
+$password = 'Khan12@@';           // Replace with your database password
 
 try {
     // Establish a PDO connection to the database
