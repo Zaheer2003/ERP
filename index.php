@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = new mysqli("localhost", "root", "", "cberp"); // Replace with your DB details
+$conn = new mysqli("cberp.mysql.database.azure.com", "Zaheer", "Khan12@@", "cberp"); // Replace with your DB details
 
 // Check connection
 if ($conn->connect_error) {
