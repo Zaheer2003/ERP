@@ -7,7 +7,7 @@ include('Header.php');
 // Database connection
 $host = 'cberp.mysql.database.azure.com';      // Replace with your host (e.g., localhost)
 $dbname = 'cberp';        // Replace with your database name
-echo $username = 'Zaheer';       // Replace with your database username
+$username = 'Zaheer';       // Replace with your database username
 $password = 'Khan12@@';           // Replace with your database password
 
 try {
