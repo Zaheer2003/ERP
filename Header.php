@@ -50,13 +50,11 @@ if ($user !== null && isset($user['userPicture'])) {
     <meta name="description" content="">
     <meta name="author" content="">
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="ERPAssest/assets/images/favicon.png">
+   
     <title><?php echo isset($pageTitle) ? $pageTitle : "Admin"; ?></title>
 
     <!-- Custom CSS -->
-    <link href="../ERPAssest/assets/extra-libs/c3/c3.min.css" rel="stylesheet">
-    <link href="../ERPAssest/assets/libs/chartist/dist/chartist.min.css" rel="stylesheet">
-    <link href="../ERPAssest/assets/extra-libs/jvector/jquery-jvectormap-2.0.2.css" rel="stylesheet" />
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
@@ -75,15 +73,7 @@ if ($user !== null && isset($user['userPicture'])) {
 
 
 
-    <!-- Custom CSS -->
-    <link href="../ERPAssest/dist/css/style.min.css" rel="stylesheet">
-
-    <!-- Data Table -->
-    <link href="../ERPAssest/datatables/css/dataTables.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../ERPAssest/datatables/css/responsive.bootstrap4.min.css" rel="stylesheet" />
-    <link href="../ERPAssest/datatables/css/icon-font.min.css" rel="stylesheet" />
-
-    <script src="../ERPAssest/assets/libs/jquery/dist/jquery.min.js"></script>
+    
     <script src="https://cdn.ckeditor.com/4.16.2/standard/ckeditor.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Bootstrap JS (for collapsible functionality) -->
@@ -98,25 +88,10 @@ if ($user !== null && isset($user['userPicture'])) {
         href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet" />
 
-    <link rel="stylesheet" href="../ERPAssest/assets/fonts/boxicons.css" />
-
-    <!-- Core CSS -->
-    <link rel="stylesheet" href="../ERPAssest/assets/css/core.css" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="../ERPAssest/assets/css/theme-default.css" class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="../ERPAssest/assets/css/demo.css" />
-
-    <!-- Vendors CSS -->
-    <link rel="stylesheet" href="../ERPAssest/assets/libs/perfect-scrollbar/perfect-scrollbar.css" />
-
- 
-
-    <!-- Page CSS -->
   
 
-    <!-- Helpers -->
-    <script src="../ERPAssest/assets/js/helpers.js"></script>
-    <!-- Template customizer & Theme config files -->
-    <script src="../ERPAssest/assets/js/config.js"></script>
+    <!-- Page CSS -->
+
 
     <!-- HTML5 Shim and Respond.js IE8 support -->
     <!--[if lt IE 9]>
