@@ -2,47 +2,17 @@
 session_start();
 $conn = new mysqli("cberp.mysql.database.azure.com", "Zaheer", "Khan12@@", "cberp"); // Replace with your DB details
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
 
-// Login Handling
+
+// Direct connection to dashboard (replace with your actual role logic if needed)
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
-    // Check if 'email' key exists in the $_POST array before accessing
-    if (isset($_POST['username']) && isset($_POST['password'])) {
-        $email = $conn->real_escape_string(trim($_POST['username'])); // Use 'email' instead of 'username'
-        $password = trim($_POST['password']);
+    // Default role assignment for demo purposes
+    $_SESSION['username'] = "guest"; // Set a default username or role
+    $_SESSION['role'] = "Employee"; // Adjust as per your needs
 
-        // Use prepared statement to prevent SQL injection
-        $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
-        $stmt->bind_param("s", $email);
-        $stmt->execute();
-        $result = $stmt->get_result();
-
-        if ($result->num_rows > 0) {
-            $row = $result->fetch_assoc();
-            if (password_verify($password, $row['password'])) {
-                $_SESSION['username'] = $email;
-                $_SESSION['role'] = $row['role']; // Store the role in the session
-                
-                // Redirect based on user role
-                if ($_SESSION['role'] == 'Manager' || $_SESSION['role'] == 'Employee') {
-                    header("Location: dashboard.php"); // Redirect to admin/manager dashboard
-                    exit();
-                } else {
-                    header("Location: dashboard.php"); // Redirect to employee dashboard (limited access)
-                    exit();
-                }
-            } else {
-                $error = "Invalid password.";
-            }
-        } else {
-            $error = "No user found with that email.";
-        }
-    } else {
-        $error = "Please enter both email and password.";
-    }
+    // Redirect to dashboard
+    header("Location: dashboard.php");
+    exit();
 }
 ?>
 
@@ -69,11 +39,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['login'])) {
             <form method="POST" action="">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="text" name="username" placeholder="Email or UserName" required>
+                    <input type="text" name="username" placeholder="Email or UserName" >
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" name="password" placeholder="Password" required>
+                    <input type="password" name="password" placeholder="Password" >
                     <i class='bx bxs-lock-alt'></i>
                 </div>
                 <button type="submit" name="login" class="btn">Login</button>
