@@ -3,7 +3,7 @@ cho<?php
 date_default_timezone_set('Asia/Kolkata');
 
 include('Header.php');
-include('db_connect');
+include('db_connect.php');
 try {
     // Establish PDO connection to the database
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
